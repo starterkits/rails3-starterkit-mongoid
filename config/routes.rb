@@ -1,5 +1,7 @@
 Quickstartmongo::Application.routes.draw do
 
+  devise_for :users
+
   mount Resque::Server.new, :at => "/resque"
 
   # The priority is based upon order of creation:
