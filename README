@@ -1,0 +1,12 @@
+== Setup
+
+On OSX dev machine (includes rb-fsevent)...
+
+rails new quickstartmongo --skip-active-record --skip-test-unit
+rails g mongoid:config
+rails g rspec:install
+rails g cucumber:install --rspec --spork
+gem install rb-fsevent
+guard init spork
+guard init rspec
+guard init cucumber
