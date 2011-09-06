@@ -45,6 +45,7 @@ group :development do
   gem 'haml-rails'            # haml generators and auto config
   gem 'foreman'               # run procfile locally similar to heroku cedar stack
   gem 'heroku'                # deploy to heroku
+  gem 'wirble'                # irb color
 end
 
 

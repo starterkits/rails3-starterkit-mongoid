@@ -1,8 +1,9 @@
 Quickstartmongo::Application.routes.draw do
-
-  devise_for :users
-
   mount Resque::Server.new, :at => "/resque"
+
+  match '/auth/:provider/callback' => 'authentications#create'
+  devise_for :users, controllers: {registrations: 'registrations'}
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -20,6 +20,7 @@ add to routes.rb >>> mount Resque::Server.new, :at => "/resque"
 # setup devise
 rails g devise:install
 rails g devise User
+rails g devise:views
 
 Output from devise:install...
 ===============================================================================
